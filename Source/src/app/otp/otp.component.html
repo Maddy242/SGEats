@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="tool">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <p class="header-otp">OTP Verification</p>
+      </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="otp-10">
+
+    <div class="otp-head">
+      <div id="divOuter">
+        <div id="divInner">
+          <table>
+            <tr>
+              <td>
+                <ion-input type="text" #otp1 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, '', otp2)">
+                </ion-input>
+              </td>
+              <td>
+                <ion-input type="text" #otp2 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp1, otp3)">
+                </ion-input>
+              </td>
+              <td>
+                <ion-input type="text" #otp3 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp2, otp4)">
+                </ion-input>
+              </td>
+              <td>
+                <ion-input type="text" #otp4 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp3, otp5)">
+                </ion-input>
+              </td>
+              <td>
+                <ion-input type="text" #otp5 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp4, otp6)">
+                </ion-input>
+              </td>
+              <td>
+                <ion-input type="text" #otp6 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp5, '')">
+                </ion-input>
+              </td>
+            </tr>
+          </table>
+          <!-- <input id="partitioned" class="otp-20" type="number" placeholder="OTP" maxlength="6" /> -->
+          <div class="btn-ctrl">
+            <button class="btn-submit" (click)="submitOTP($event)">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

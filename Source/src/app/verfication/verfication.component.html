@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="tool">
+          <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+          <ion-title><p class="header-qr">Verification</p></ion-title>
+        </div>
+      </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="content">
+    <div class="scan-content">
+    <div class="qr">
+        <img src="../../assets/images/verfication.PNG" />
+    </div>
+    <div class="rest-desc">
+        <p class="desc-10">QR Scanned Successfully!</p>
+        <p class="desc-10">You are signed in</p>
+        <p class="name">AGRO RESTAURANT</p>
+      </div>
+    <div class="btn-ctrl">
+        <button class="btn-submit" (click)="StartOrder($event)">Let's Order Food</button>
+    </div>
+  </div>
+  </div>
+</ion-content>

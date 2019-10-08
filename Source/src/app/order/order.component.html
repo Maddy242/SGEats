@@ -1,0 +1,195 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="tool">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <p class="header">Agro Restaurent</p>
+      </ion-title>
+      <div class="icons">
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="person"></ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="order-content">
+    <div class="rest-10">
+      <div class="slides">
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide>
+            <div>
+              <img src="../../assets/images/food.PNG" />
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div>
+              <img src="../../assets/images/food.PNG" />
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div>
+              <img src="../../assets/images/food.PNG" />
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+
+    <div class="food-10">
+      <div class="category-10">
+        <div class="cat-20">
+          <p class="category-text">Starters</p>
+        </div>
+        <div class="starters">
+          <div class="starters-10">
+            <div class="starters-img">
+              <img src="../../assets/images/food.PNG" />
+            </div>
+            <div class="starters-20">
+              <div class="start-head">
+                <p>Chicken 65</p>
+                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
+                    <span></span>
+                  </a>
+                </div>
+                <!-- <ion-icon name="volume-down"></ion-icon>
+                  <ion-icon name="person"></ion-icon> -->
+                <!-- <ion-icon name="volume-up"></ion-icon> -->
+              </div>
+              <p class="start-price">$ 5.00</p>
+              <div class="cust-10">
+                <p>Customize</p>
+                <div class="quant">
+                  <ion-icon name="remove"></ion-icon>
+                  <p> 0 </p>
+                  <ion-icon name="add"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="starters">
+          <div class="starters-10">
+            <div class="starters-img">
+              <img src="../../assets/images/food.PNG" />
+            </div>
+            <div class="starters-20">
+              <div class="start-head">
+                <p>Chicken 65</p>
+                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
+                    <span></span>
+                  </a>
+                </div>
+                <!-- <ion-icon name="volume-down"></ion-icon>
+                    <ion-icon name="person"></ion-icon> -->
+                <!-- <ion-icon name="volume-up"></ion-icon> -->
+              </div>
+              <p class="start-price">$ 5.00</p>
+              <div class="cust-10">
+                <p>Customize</p>
+                <div class="quant">
+                  <ion-icon name="remove"></ion-icon>
+                  <p> 0 </p>
+                  <ion-icon name="add"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="starters">
+          <div class="starters-10">
+            <div class="starters-img">
+              <img src="../../assets/images/food.PNG" />
+            </div>
+            <div class="starters-20">
+              <div class="start-head">
+                <p>Chicken Lollipop</p>
+                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
+                    <span></span>
+                  </a>
+                </div>
+                <!-- <ion-icon name="volume-down"></ion-icon>
+                      <ion-icon name="person"></ion-icon> -->
+                <!-- <ion-icon name="volume-up"></ion-icon> -->
+              </div>
+              <p class="start-price">$ 5.00</p>
+              <div class="cust-10">
+                <p>Tandoori</p>
+                <div class="quant">
+                  <ion-icon name="remove"></ion-icon>
+                  <p> 0 </p>
+                  <ion-icon name="add"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-20">
+          <p class="category-text">Briyani</p>
+        </div>
+        <div class="starters">
+          <div class="starters-10">
+            <div class="starters-img">
+              <img src="../../assets/images/food.PNG" />
+            </div>
+            <div class="starters-20">
+              <div class="start-head">
+                <p>Chicken Briyani</p>
+                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
+                    <span></span>
+                  </a>
+                </div>
+                <!-- <ion-icon name="volume-down"></ion-icon>
+                    <ion-icon name="person"></ion-icon> -->
+                <!-- <ion-icon name="volume-up"></ion-icon> -->
+              </div>
+              <p class="start-price">$ 5.00</p>
+              <div class="cust-10">
+                <p>Customize</p>
+                <div class="quant">
+                  <ion-icon name="remove"></ion-icon>
+                  <p> 0 </p>
+                  <ion-icon name="add"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="starters">
+            <div class="starters-10">
+              <div class="starters-img">
+                <img src="../../assets/images/food.PNG" />
+              </div>
+              <div class="starters-20">
+                <div class="start-head">
+                  <p>Mutton Briyani</p>
+                  <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
+                      <span></span>
+                    </a>
+                  </div>
+                  <!-- <ion-icon name="volume-down"></ion-icon>
+                      <ion-icon name="person"></ion-icon> -->
+                  <!-- <ion-icon name="volume-up"></ion-icon> -->
+                </div>
+                <p class="start-price">$ 5.00</p>
+                <div class="cust-10">
+                  <p>Customize</p>
+                  <div class="quant">
+                    <ion-icon name="remove"></ion-icon>
+                    <p> 0 </p>
+                    <ion-icon name="add"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

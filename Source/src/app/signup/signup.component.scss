@@ -1,0 +1,111 @@
+@import '../../assets/style/variables.scss';
+
+.tool{
+    display: flex;
+}
+
+.header-signup{
+    font-family: $font-family;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    color: #010101;
+}
+
+ion-toolbar{
+    --background: #F6F3F3;
+    position: fixed;
+}
+
+ion-title{
+     padding: 5px;
+}
+
+ion-content{
+    --background: #F6F3F3 !important;
+}
+
+.mob-10, .name-10, .email-10{
+    width: 80%;
+    height: 45px;
+    padding: .375rem .75rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-family: $font-family;
+    outline: none;
+}
+
+.mob-ctrl, .name-ctrl, .email-ctrl, .btn-ctrl{
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.signup{
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    text-align: center;
+}
+
+.btn-submit,  .btn-submit:focus{
+    width: 80%;
+    margin: 10px 0px;
+    height: 45px;
+    background: #D3100E;
+    color: #fff;
+    font-family: $font-family;
+    outline: none;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.reg-10{
+    background: #E5E0DC;
+    padding: 5px;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.reg-10 span{
+    font-size: 14px;
+    color: #312F2E;
+    font-weight: bold;
+    font-family: $font-family;
+}
+
+.reg-10 a{
+    font-size: 14px;
+    color: #5FA50B;
+    font-weight: bold;
+    font-family: $font-family;
+}
+
+.error{
+    margin: 0px;
+    text-align: left;
+    margin-left: 15%;
+    color: red;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+    .btn-submit, .btn-submit:focus{
+        width: 50%;
+     }
+    
+     .mob-10, .name-10, .email-10{
+         width: 50%  !important;
+         outline: none;
+      }
+
+     .reg-10{
+         width: 30%;
+     }
+   }

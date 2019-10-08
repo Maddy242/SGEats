@@ -1,0 +1,84 @@
+@import '../../assets/style/variables.scss';
+
+    .hydrated{
+        --background: url(../../assets/images/background.png) 50% 55%;
+        // background-size: 100% 100%;
+        // height: 100%;
+    }
+
+    .login{
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 65%;
+    }
+
+    .login .login-ctrl, .login-ctrl:focus{
+        width: 80%;
+        height: 45px;
+        padding: .375rem .75rem;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        font-family: $font-family;
+        outline: none;
+        text-align: left;
+        margin: auto;
+    }
+
+    .btn-submit,  .btn-submit:focus{
+        width: 80%;
+        margin: 10px 0px;
+        height: 45px;
+        background: $button-background;
+        color: #fff;
+        font-family: $font-family;
+        outline: none;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    .reg-10{
+        background: #E5E0DC;
+        padding: 5px;
+        margin: auto;
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .reg-10 span{
+        font-size: 14px;
+        color: #312F2E;
+        font-weight: bold;
+        font-family: $font-family;
+    }
+
+    .reg-10 a{
+        font-size: 14px;
+        color: #5FA50B;
+        font-weight: bold;
+        font-family: $font-family;
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 768px) {
+       .btn-submit, .btn-submit:focus{
+           width: 60%;
+        }
+
+        .login-ctrl, .login-ctrl:focus{
+            width: 60%  !important;
+            outline: none;
+         }
+
+        .reg-10{
+            width: 30%;
+        }
+      }
+
+// }

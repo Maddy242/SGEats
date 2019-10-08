@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+      <div class="tool">
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title><p class="header-signup">Signup</p></ion-title>
+      </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content" [ngStyle]='height'>
+    <div class="signup">
+      <div class="name-ctrl">
+          <input class="name-10" type="text" (focus)="show($event)" (focusout)="hide($event)"  [(ngModel)]="name" placeholder="Full name" />
+          <!-- <p class="error">Please enter username</p> -->
+      </div>
+      <div class="mob-ctrl">
+        <input class="mob-10" type="number" (focus)="show($event)" (focusout)="hide($event)"  [(ngModel)]="number" placeholder="Mobile number" />
+        <!-- <p class="error">Please enter mobile number</p> -->
+      </div>     
+      <div class="email-ctrl">
+        <input class="email-10" type="text" (focus)="show($event)" (focusout)="hide($event)" [(ngModel)]="email" placeholder="Email" />
+        <!-- <p class="error">Invalid email</p> -->
+      </div>
+      <div class="btn-ctrl">
+          <button class="btn-submit" (click)="signup($event)">Signup</button>
+      </div>
+      <div class="reg-10">
+          <span>Already User? <a (click)="loginClick()">Login</a></span>
+        </div>
+    </div>
+  </div>
+</ion-content>

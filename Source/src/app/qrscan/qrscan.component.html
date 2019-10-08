@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="tool">
+          <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+          <ion-title><p class="header-qr">Scan QR Code</p></ion-title>
+        </div>
+      </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="content">
+    <div class="scan-content">
+    <div class="qr">
+        <img src="../../assets/images/qr.PNG" />
+    </div>
+    <div class="btn-ctrl">
+        <button class="btn-submit" (click)="StartScan($event)">Scan Code</button>
+    </div>
+  </div>
+  </div>
+</ion-content>

@@ -1,0 +1,11 @@
+<ion-content >
+  <div class="content col-12">
+    <div class="login">
+      <input type="number" placeholder="Mobile number" class="login-ctrl" [(ngModel)]="mobileNumber" />
+      <button class="btn-submit" [disabled]="!mobileNumber" (click)="loginClick($event)">Login</button>
+      <div class="reg-10">
+        <span>New User? <a (click)="signupClick($event)">Register</a></span>
+      </div>
+    </div>
+  </div>
+</ion-content>

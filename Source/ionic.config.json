@@ -1,0 +1,7 @@
+{
+  "name": "SGEats",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
