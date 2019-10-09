@@ -17,12 +17,24 @@ export class OtpComponent implements OnInit {
   }
 
   next(args, previousElement, nextElement) {
-    if (args != null && args.keyCode != null && args.keyCode != 229) {
+    console.log(args);
+    // if (args != null && args.keyCode != null && args.keyCode != 229) {
+    //   if (nextElement != "") {
+    //     nextElement.setFocus();
+    //   }
+    // }
+    // else{
+    //   if(previousElement != ""){
+    //     previousElement.setFocus();
+    //   }
+    // }
+
+    if (args != null && args.target != null && args.target.value.trim() != "") {
       if (nextElement != "") {
         nextElement.setFocus();
       }
     }
-    else{
+    else {
       if(previousElement != ""){
         previousElement.setFocus();
       }

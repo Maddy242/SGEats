@@ -15,8 +15,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="order-content">
+<ion-content >
+  <div class="order-content" (click)="HideCustomizeOnblur($event)">
     <div class="rest-10">
       <div class="slides">
         <ion-slides pager="true" [options]="slideOpts">
@@ -62,7 +62,7 @@
               </div>
               <p class="start-price">$ 5.00</p>
               <div class="cust-10">
-                <p>Customize</p>
+                <p (click)='ShowCustomize($event)'>Customize</p>
                 <div class="quant">
                   <ion-icon name="remove"></ion-icon>
                   <p> 0 </p>
@@ -79,7 +79,7 @@
             </div>
             <div class="starters-20">
               <div class="start-head">
-                <p>Chicken 65</p>
+                <p>Tandoori</p>
                 <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
                     <span></span>
                   </a>
@@ -90,7 +90,7 @@
               </div>
               <p class="start-price">$ 5.00</p>
               <div class="cust-10">
-                <p>Customize</p>
+                <p (click)='ShowCustomize($event)'>Customize</p>
                 <div class="quant">
                   <ion-icon name="remove"></ion-icon>
                   <p> 0 </p>
@@ -118,7 +118,7 @@
               </div>
               <p class="start-price">$ 5.00</p>
               <div class="cust-10">
-                <p>Tandoori</p>
+                <p>Customize</p>
                 <div class="quant">
                   <ion-icon name="remove"></ion-icon>
                   <p> 0 </p>
@@ -150,7 +150,7 @@
               </div>
               <p class="start-price">$ 5.00</p>
               <div class="cust-10">
-                <p>Customize</p>
+                <p (click)='ShowCustomize($event)'>Customize</p>
                 <div class="quant">
                   <ion-icon name="remove"></ion-icon>
                   <p> 0 </p>
@@ -179,7 +179,7 @@
                 </div>
                 <p class="start-price">$ 5.00</p>
                 <div class="cust-10">
-                  <p>Customize</p>
+                  <p (click)='ShowCustomize($event)'>Customize</p>
                   <div class="quant">
                     <ion-icon name="remove"></ion-icon>
                     <p> 0 </p>
@@ -189,6 +189,21 @@
               </div>
             </div>
           </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <div class="cust-model" *ngIf='display' id="custdialog">
+    <div class="content">
+      <div class="header">
+        <p (click)='ShowCustomize($event)' id="custheader">Customize</p>
+      </div>
+      <div class="cust-content">
+        <textarea maxlength="150" placeholder="Type your customization here..." class="cust-30"></textarea>
+      </div>
+      <div class="footer">
+        <button class="btn-submit" (click)="CloseCustomize($event)">Add Item</button>
       </div>
     </div>
   </div>

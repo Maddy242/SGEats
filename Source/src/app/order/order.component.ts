@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, AlertController } from '@ionic/angular'
 
 @Component({
   selector: 'app-order',
@@ -12,9 +13,10 @@ export class OrderComponent implements OnInit {
     speed: 400
   };
   status: boolean;
-  constructor() { }
+  display: boolean = false;
+  constructor(private navCtrl: NavController, private alertCtrl: AlertController) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   toggle() {
     this.status = !this.status;
@@ -26,6 +28,20 @@ export class OrderComponent implements OnInit {
     // }
   }
 
+  ShowCustomize(args) {
+    this.display = true
+  }
+
+  CloseCustomize(args) {
+    this.display = false;
+  }
+
+  HideCustomizeOnblur(args) {
+    if (args != null && args.target != undefined && args.target != null && args.target.innerText != null && args.target.innerText != "" && args.target.innerText == "Customize" && args.target.id != "custheader")
+      this.display = true;
+    else //if(args.target.parentElement.id != "custdialog")
+      this.display = false;
+  }
 
 
 }
