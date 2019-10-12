@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { AlertController, NavController } from '@ionic/angular';
 export class LoginComponent implements OnInit {
 
   mobileNumber: any;
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController) { }
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, public toasterCtrl: ToastController) { }
 
   ngOnInit() { }
 
@@ -41,6 +41,14 @@ export class LoginComponent implements OnInit {
     });
 
     await alert.present();
+  }
+
+  async presentToast(content) {
+    const toast = await this.toasterCtrl.create({
+      message: content,
+      duration: 2000
+    });
+    toast.present();
   }
 
 }

@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'otp', loadChildren: () => import('./otp/otp.module').then( m => m.OTPModule)},
   { path: 'qr', loadChildren: () => import('./qrscan/qrscan.module').then( m => m.QRScanModule)},
   { path: 'verification', loadChildren: () => import('./verfication/verification.module').then( m => m.VerificationModule)},
-  { path: 'order', loadChildren: () => import('./order/order.module').then( m => m.OrderModule)}
+  { path: 'order', loadChildren: () => import('./order/order.module').then( m => m.OrderModule)},
+  { path: 'summary', loadChildren: () => import('./order-summary/order-summary.module').then( m => m.OrderSummaryModule)}
 ];
 
 @NgModule({

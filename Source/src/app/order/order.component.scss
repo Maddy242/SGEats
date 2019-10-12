@@ -43,7 +43,7 @@ ion-icon.md.hydrated {
 }
 
 .icons{
-    margin-right: 10px;
+    margin-top: 2px;
 }
 
 ion-slide div{
@@ -107,7 +107,7 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
 
 .cust-10 p{
     color: #495057;
-    margin: 5px;
+    margin: 5px 0px;
     font-family: $font-family;
 }
 
@@ -156,6 +156,8 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
     width: 100%;
     bottom: 0px;
     padding: 15px;
+    box-shadow: #333 0px 0px 15px 0px;
+    z-index: 99999;
 }
 
 .header p{
@@ -167,7 +169,7 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
 
 .cust-30{
     width: 100%;
-    height: 100px;
+    height: 150px;
     padding: .375rem .75rem;
     font-size: 16px;
     font-weight: 400;
@@ -194,65 +196,90 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
     outline: none;
     border-radius: 3px;
     font-size: 16px;
+    font-weight: bold;
+}
+
+.cust-40 label{
+    margin-left: 10px; 
+    color: #495057;
+    font-family: $font-family;
+}
+
+.cust-40 p{
+    margin: 5px 0px 0px 10px; 
+    color: $button-background;
+    font-family: $font-family;
+    font-weight: bold;
+}
+
+.cust-content-10{
+    display: flex;
+    margin: 20px 0px;
+}
+
+.cust-content-head{
+    font-size: 14px;
+    color: $subhead-color;
+    font-family: $font-family;
+    font-weight: bold;
+}
+
+.ion-color-primary{
+    --ion-color-base: #D3100E !important;
+}
+
+.order-submit{
+    text-align: center;
+
+    button{
+        width: 70% !important;
+    }
+}
+
+ion-fab-button, ion-fab-button.activated{
+    right: 15px;
+    position: fixed;
+    bottom: 15px;
+    --background: #D3100E;
+
+    ion-icon.md.hydrated{
+        background: transparent;
+    }
+}
+
+img.audio {
+    position: absolute;
+    right: 30px;
+    height: 25px;
+}
+
+.cat-20 img{
+    position: absolute;
+    right: 20px;
+    height: 20px;
+
+}
+
+.header{
+    display: flex;
+}
+
+.pencil{
+    position: absolute;
+    right: 20px;
 }
 
 
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+    .btn-submit, .btn-submit:focus{
+        width: 50%;
+     }
 
-.speaker {
-	height: 30px;
-	width: 30px;
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
-
-	span {
-		display: block;
-		width: 8px;
-		height: 8px;
-		background: #888888;
-		margin: 11px 0 0 2px;
-
-		&:after {
-			content: '';
-			position: absolute;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-color: transparent #888888 transparent transparent;
-			border-width: 10px 14px 10px 15px;
-			left: -13px;
-			top: 5px;
-		}
-
-		&:before {
-			transform: rotate(45deg);
-			border-radius: 0 50px 0 0;
-			content: '';
-			position: absolute;
-			width: 5px;
-			height: 5px;
-			border-style: double;
-			border-color: #888888;
-			border-width: 7px 7px 0 0;
-			left: 18px;
-			top: 9px;
-			transition: all 0.2s ease-out;
-		}
-	}
-
-	&:hover {
-
-		span:before {
-			transform: scale(.8) translate(-3px, 0) rotate(42deg);		
+     .order-submit{
+        text-align: center;
+    
+        button{
+            width: 50% !important;
+        }
     }
-	}
-  
-  &.mute {
-    span:before {
-			transform: scale(.5) translate(-15px, 0) rotate(36deg);
-      opacity: 0;
-    }
-  }
-}
-
-
+   }

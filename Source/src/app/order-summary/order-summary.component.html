@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="tool">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <p class="header">Order Summary</p>
+      </ion-title>
+      <div class="icons">
+        <!-- <ion-icon name="search"></ion-icon>
+          <ion-icon name="person"></ion-icon> -->
+        <!-- <img src="../../assets/images/Search.png" />
+          <img src="../../assets/images/user-profile.png" /> -->
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="summary-content">
+    <div class="item-summary">
+      <div class="item">
+        <p class="name">Chicken 65</p>
+        <div class="quant col-6">
+          <ion-icon name="remove"></ion-icon>
+          <p> 0 </p>
+          <ion-icon name="add"></ion-icon>
+        </div>
+        <span class="price">$ 5.00</span>
+      </div>
+      <div class="item">
+        <p class="name">Chicken Briyani</p>
+        <div class="quant">
+          <ion-icon name="remove"></ion-icon>
+          <p> 0 </p>
+          <ion-icon name="add"></ion-icon>
+        </div>
+        <span class="price">$ 5.00</span>
+      </div>
+    </div>
+    <div class="price-summary">
+      <div class="coupon">
+        <img class="discount" src="../../assets/images/discount.png" />
+        <p>APPLY COUPON</p>
+        <img class="arrow" src="../../assets/images/arrow-frwd.png" alt="">
+      </div>
+      <div class="bill-summary">
+        <p class="bill">Bill Details</p>
+        <div class="total">
+          <p>Item Total</p>
+          <span>$ 35.00</span>
+        </div>
+        <div class="gst">
+          <p>GST</p>
+          <span>$ 35.00</span>
+        </div>
+      </div>
+
+      <div class="total-pay">
+        <p>To Pay</p>
+        <span>$ 36.75</span>
+      </div>
+    </div>
+    <div class="pay">
+      <button class="btn-submit" (click)="Paynow($event)">Pay Now</button>
+    </div>
+  </div>
+</ion-content>

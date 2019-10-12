@@ -24,3 +24,9 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.toast-content-10 .toast-wrapper .toast-container .toast-content{
+    padding: 5px 0px;
+    text-align: center;
+    width: 50% !important;    
+}

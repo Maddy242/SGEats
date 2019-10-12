@@ -8,14 +8,16 @@
         <p class="header">Agro Restaurent</p>
       </ion-title>
       <div class="icons">
-        <ion-icon name="search"></ion-icon>
-        <ion-icon name="person"></ion-icon>
+        <!-- <ion-icon name="search"></ion-icon>
+        <ion-icon name="person"></ion-icon> -->
+        <img src="../../assets/images/Search.png" />
+        <img src="../../assets/images/user-profile.png" />
       </div>
     </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
   <div class="order-content" (click)="HideCustomizeOnblur($event)">
     <div class="rest-10">
       <div class="slides">
@@ -43,6 +45,7 @@
       <div class="category-10">
         <div class="cat-20">
           <p class="category-text">Starters</p>
+          <img src="../../assets/images/filter.png" />
         </div>
         <div class="starters">
           <div class="starters-10">
@@ -52,10 +55,11 @@
             <div class="starters-20">
               <div class="start-head">
                 <p>Chicken 65</p>
-                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
+                <!-- <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
                     <span></span>
                   </a>
-                </div>
+                </div> -->
+                <img class="audio" src="../../assets/images/audio.png" />
                 <!-- <ion-icon name="volume-down"></ion-icon>
                   <ion-icon name="person"></ion-icon> -->
                 <!-- <ion-icon name="volume-up"></ion-icon> -->
@@ -80,10 +84,7 @@
             <div class="starters-20">
               <div class="start-head">
                 <p>Tandoori</p>
-                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
-                    <span></span>
-                  </a>
-                </div>
+                <img class="audio" src="../../assets/images/audio.png" />
                 <!-- <ion-icon name="volume-down"></ion-icon>
                     <ion-icon name="person"></ion-icon> -->
                 <!-- <ion-icon name="volume-up"></ion-icon> -->
@@ -108,10 +109,7 @@
             <div class="starters-20">
               <div class="start-head">
                 <p>Chicken Lollipop</p>
-                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
-                    <span></span>
-                  </a>
-                </div>
+                <img class="audio" src="../../assets/images/audio.png" />
                 <!-- <ion-icon name="volume-down"></ion-icon>
                       <ion-icon name="person"></ion-icon> -->
                 <!-- <ion-icon name="volume-up"></ion-icon> -->
@@ -140,10 +138,7 @@
             <div class="starters-20">
               <div class="start-head">
                 <p>Chicken Briyani</p>
-                <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
-                    <span></span>
-                  </a>
-                </div>
+                <img class="audio" src="../../assets/images/audio.png" />
                 <!-- <ion-icon name="volume-down"></ion-icon>
                     <ion-icon name="person"></ion-icon> -->
                 <!-- <ion-icon name="volume-up"></ion-icon> -->
@@ -162,49 +157,81 @@
         </div>
 
         <div class="starters">
-            <div class="starters-10">
-              <div class="starters-img">
-                <img src="../../assets/images/food.PNG" />
-              </div>
-              <div class="starters-20">
-                <div class="start-head">
-                  <p>Mutton Briyani</p>
-                  <div class="volume"><a class="speaker" [ngClass]="status ? 'mute' : 'unmute'" (click)="toggle();">
-                      <span></span>
-                    </a>
-                  </div>
-                  <!-- <ion-icon name="volume-down"></ion-icon>
+          <div class="starters-10">
+            <div class="starters-img">
+              <img src="../../assets/images/food.PNG" />
+            </div>
+            <div class="starters-20">
+              <div class="start-head">
+                <p>Mutton Briyani</p>
+                <img class="audio" src="../../assets/images/audio.png" />
+                <!-- <ion-icon name="volume-down"></ion-icon>
                       <ion-icon name="person"></ion-icon> -->
-                  <!-- <ion-icon name="volume-up"></ion-icon> -->
-                </div>
-                <p class="start-price">$ 5.00</p>
-                <div class="cust-10">
-                  <p (click)='ShowCustomize($event)'>Customize</p>
-                  <div class="quant">
-                    <ion-icon name="remove"></ion-icon>
-                    <p> 0 </p>
-                    <ion-icon name="add"></ion-icon>
-                  </div>
+                <!-- <ion-icon name="volume-up"></ion-icon> -->
+              </div>
+              <p class="start-price">$ 5.00</p>
+              <div class="cust-10">
+                <p (click)='ShowCustomize($event)'>Customize</p>
+                <div class="quant">
+                  <ion-icon name="remove"></ion-icon>
+                  <p> 0 </p>
+                  <ion-icon name="add"></ion-icon>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="order-submit">
+          <button class="btn-submit" (click)="Ordernow($event)">Order now</button>
+        </div>
       </div>
     </div>
 
-    
+
   </div>
   <div class="cust-model" *ngIf='display' id="custdialog">
     <div class="content">
       <div class="header">
         <p (click)='ShowCustomize($event)' id="custheader">Customize</p>
+        <img class="pencil" *ngIf="showPencil" (click)="changeCustomization('Pencil')"
+          src="../../assets/images/pencil-on-a-notes-paper.png" />
+        <img class="pencil" *ngIf="!showPencil" (click)="changeCustomization('dot')"
+          src="../../assets/images/list-symbol-of-three-items-with-dots.png" />
       </div>
       <div class="cust-content">
-        <textarea maxlength="150" placeholder="Type your customization here..." class="cust-30"></textarea>
+        <div *ngIf="showPencil">
+          <p class="cust-content-head">Chicken 65</p>
+          <div class="cust-content-10">
+            <div class="cust-check">
+              <ion-checkbox color="primary"></ion-checkbox>
+            </div>
+            <div class="cust-40">
+              <label>Extra Pieces</label>
+              <p>$ 1.00</p>
+            </div>
+          </div>
+          <div class="cust-content-10">
+            <div class="cust-check">
+              <ion-checkbox color="primary"></ion-checkbox>
+            </div>
+            <div class="cust-40">
+              <label>Added Onion</label>
+              <p>$ 1.00</p>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!showPencil">
+          <textarea maxlength="150" placeholder="Type your customization here..." class="cust-30"></textarea>
+        </div>
       </div>
       <div class="footer">
         <button class="btn-submit" (click)="CloseCustomize($event)">Add Item</button>
       </div>
     </div>
   </div>
+
+  <ion-fab>
+    <ion-fab-button><img src="../../assets/images/cart.png" /></ion-fab-button>
+  </ion-fab>
 </ion-content>

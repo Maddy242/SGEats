@@ -1,0 +1,222 @@
+@import '../../assets/style/variables.scss';
+
+ion-toolbar{
+    --background: #F6F3F3 !important;
+}
+
+ion-title{
+     padding: 5px;
+}
+
+.header{
+    font-family: $font-family;
+    padding: 0px;
+    margin: 0px;
+    color: $subhead-color;
+    font-weight: bold;
+}
+
+.tool{
+    display: flex;
+}
+
+ion-toolbar{
+    background: #F6F3F3 !important;
+    position: fixed;
+}
+
+ion-content{
+    --background: #f6f3f3;
+}
+
+.order-content{
+    position: relative;
+    top: 10%;
+}
+
+ion-icon.md.hydrated {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.icons{
+    margin-top: 2px;
+}
+
+.quant{
+    height: 30px;
+    border: 1px solid #DCD9D6;
+    border-radius: 5px;
+    display: flex;
+    position: fixed;
+    right: 90px;
+}
+
+.quant ion-icon.md.hydrated {
+    width: 20px;
+    height: 20px;
+    background: #EFEBE9;
+    border-radius: 50%;
+    margin: 5px;
+    color: #888888;
+}
+
+.quant p{
+    margin: 5px;
+    font-family: $font-family;
+}
+
+.summary-content{
+    top: 10%;
+    position: absolute;
+    width: 100%;
+}
+
+.item-summary{
+    background: #fff;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    min-height: 100px;
+
+    .name{
+        margin: 6px 0px 0px 0px;
+        font-size: 14px;
+        color: $subhead-color;
+        font-family: $font-family;
+        width: 55%;
+        font-weight: bold;
+    }
+
+    .price{
+        margin: 6px 0px 0px 10px;
+        font-size: 16px;
+        color: $button-background;
+        font-family: $font-family;
+        right: 25px;
+        position: fixed;
+    }
+}
+
+
+.price{
+    right: 10px;
+}
+
+.item{
+    display: flex;
+    margin: 15px 0px;
+}
+
+.price-summary{
+    height: 100%;
+    background: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+.coupon{
+    display: flex;
+    margin: 10px;
+    border: 1px solid #DCD9D6;
+    border-radius: 5px;
+}
+
+.arrow{
+    margin: auto 15px auto auto;
+}
+
+.discount{
+    margin: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.coupon p{
+    font-family: $font-family;
+    font-weight: bold;
+}
+
+.bill-summary{
+    margin: 20px 0px 0px 5px;
+
+    .bill{
+        font-family: $font-family;
+        margin: 10px 0px 0px 0px;
+        color: $subhead-color;
+        font-weight: bold;
+    }
+}
+
+.total, .gst{
+    display: flex;
+    margin: 10px 0px;
+}
+
+.total p, .gst p{
+    font-family: $font-family;
+    color: #495057;
+    width: 80%;
+    margin: 0px;
+}
+
+.total span, .gst span{
+    color: $button-background;
+    font-family: $font-family;
+}
+
+.btn-submit,  .btn-submit:focus{
+    width: 100%;
+    margin: 10px 0px;
+    height: 45px;
+    background: $button-background;
+    color: #fff;
+    font-family: $font-family;
+    outline: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pay{
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    bottom: 0px;
+}
+
+.total-pay{
+    display: flex;
+    margin: 0px -10px;
+    display: flex;
+    border-top: 1px solid #DCD9D6;
+    border-bottom: 1px solid #DCD9D6;
+    padding: 20px 10px;
+
+    p{
+        width: 80%;
+        color: $subhead-color;
+        font-family: $font-family;
+        margin: 0px;
+        font-weight: bold;
+    }
+
+    span{
+        color: $button-background;
+        font-family: $font-family;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+    .item-summary .name{
+        width: 75%       
+    }
+
+    .total p, .gst p, .total-pay p{
+        width: 90%;
+    }
+}

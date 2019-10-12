@@ -14,6 +14,7 @@ export class OrderComponent implements OnInit {
   };
   status: boolean;
   display: boolean = false;
+  showPencil: boolean = true;
   constructor(private navCtrl: NavController, private alertCtrl: AlertController) { }
 
   ngOnInit() { }
@@ -26,6 +27,14 @@ export class OrderComponent implements OnInit {
     //   if (this.wheelSpinning == true && this.audio)
     //     this.audio.play();
     // }
+  }
+
+  changeCustomization(args) {
+    if (args == 'Pencil')
+      this.showPencil = false;
+    else
+      this.showPencil = true;
+
   }
 
   ShowCustomize(args) {
@@ -41,6 +50,10 @@ export class OrderComponent implements OnInit {
       this.display = true;
     else //if(args.target.parentElement.id != "custdialog")
       this.display = false;
+  }
+
+  Ordernow(args){
+    this.navCtrl.navigateForward('summary');
   }
 
 

@@ -42,6 +42,7 @@
         outline: none;
         border-radius: 3px;
         font-size: 16px;
+        font-weight: bold;
     }
 
     .reg-10{
@@ -64,6 +65,12 @@
         color: #5FA50B;
         font-weight: bold;
         font-family: $font-family;
+    }
+
+    .toast-content-10 .toast-wrapper .toast-container .toast-content{
+        padding: 5px 0px;
+        text-align: center;
+        width: 50% !important;    
     }
 
     @media only screen and (min-width: 500px) and (max-width: 768px) {
