@@ -31,12 +31,12 @@ export class OtpComponent implements OnInit {
 
     if (args != null && args.target != null && args.target.value.trim() != "") {
       if (nextElement != "") {
-        nextElement.setFocus();
+        nextElement.focus();
       }
     }
     else {
       if(previousElement != ""){
-        previousElement.setFocus();
+        previousElement.focus();
       }
     }
 

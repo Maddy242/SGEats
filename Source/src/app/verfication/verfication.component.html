@@ -5,6 +5,11 @@
             <ion-back-button></ion-back-button>
           </ion-buttons>
           <ion-title><p class="header-qr">Verification</p></ion-title>
+          <div class="icons">
+            <!-- <ion-icon name="search"></ion-icon>
+            <ion-icon name="person"></ion-icon> -->
+            <img (click)="viewAccount($event);" src="../../assets/images/user-profile.svg" />
+          </div>
         </div>
       </ion-toolbar>
 </ion-header>
@@ -19,6 +24,7 @@
         <p class="desc-10">You are signed in</p>
         <p class="name">AGRO RESTAURANT</p>
       </div>
+    <p class="status" *ngIf='ShowOrderStatus' (click)="CurrentOrder($event)">YOUR ORDER STATUS</p>
     <div class="btn-ctrl">
         <button class="btn-submit" (click)="StartOrder($event)">Let's Order Food</button>
     </div>

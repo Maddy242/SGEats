@@ -16,34 +16,27 @@
     <div class="otp-head">
       <div id="divOuter">
         <div id="divInner">
+          <p class="code-20">Verification code send to your mobile number</p>
           <table>
             <tr>
               <td>
-                <ion-input type="number" #otp1 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, '', otp2)">
-                </ion-input>
+                <input type="number" #otp1 class="otp" placeholder="*" pattern="[0-9]*" maxlength="1" size="1" (keyup)="next($event, '', otp2)" />
+                <!-- </ion-input> -->
               </td>
               <td>
-                <ion-input type="number" #otp2 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp1, otp3)">
-                </ion-input>
+                <input type="number" #otp2 class="otp" placeholder="*" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp1, otp3)" />
               </td>
               <td>
-                <ion-input type="number" #otp3 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp2, otp4)">
-                </ion-input>
+                <input type="number" #otp3 class="otp" placeholder="*" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp2, otp4)" />
+                <!-- </ion-input> -->
               </td>
               <td>
-                <ion-input type="number" #otp4 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp3, otp5)">
-                </ion-input>
-              </td>
-              <td>
-                <ion-input type="number" #otp5 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp4, otp6)">
-                </ion-input>
-              </td>
-              <td>
-                <ion-input type="number" #otp6 class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp5, '')">
-                </ion-input>
+                <input type="number" #otp4 class="otp" placeholder="*" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next($event, otp3, '')" />
+                <!-- </ion-input> -->
               </td>
             </tr>
           </table>
+          <p class="code-10">Don't receive the code?</p><span class="resend">RESEND</span>
           <!-- <input id="partitioned" class="otp-20" type="number" placeholder="OTP" maxlength="6" /> -->
           <div class="btn-ctrl">
             <button class="btn-submit" (click)="submitOTP($event)">Submit</button>

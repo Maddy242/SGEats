@@ -102,12 +102,17 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
 
 .cust-10{
     display: flex;
-    margin-top: 25px;
 }
 
 .cust-10 p{
     color: #495057;
     margin: 5px 0px;
+    font-family: $font-family;
+}
+
+.addon{
+    color: #495057;
+    margin: 10px 0px 0px 0px;
     font-family: $font-family;
 }
 
@@ -194,7 +199,7 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
     color: #fff;
     font-family: $font-family;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
 }
@@ -222,6 +227,7 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
     color: $subhead-color;
     font-family: $font-family;
     font-weight: bold;
+    margin: 5px 0px;
 }
 
 .ion-color-primary{
@@ -250,7 +256,7 @@ ion-fab-button, ion-fab-button.activated{
 img.audio {
     position: absolute;
     right: 30px;
-    height: 25px;
+    height: 20px;
 }
 
 .cat-20 img{
@@ -269,17 +275,39 @@ img.audio {
     right: 20px;
 }
 
+.footer{
+    text-align: center;
+}
+
+
+.cart-count{
+    margin: -5px 15px;
+    position: fixed;
+    background: #fff;
+    color: #000;
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.icons img{
+    height: 60px;
+    width: 60px;
+}
+
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {
     .btn-submit, .btn-submit:focus{
-        width: 50%;
+        width: 60%;
      }
 
      .order-submit{
         text-align: center;
     
         button{
-            width: 50% !important;
+            width: 60% !important;
         }
     }
    }

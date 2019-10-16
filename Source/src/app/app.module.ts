@@ -8,10 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CustomizeComponent} from '../app/customize/customize.component'
+import { CustomizeTextComponent } from '../app/customize-text/customize-text.component'
+import { FilterComponent } from '../app/filter/filter.component'
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, CustomizeComponent, CustomizeTextComponent, FilterComponent],
+  entryComponents: [CustomizeComponent, CustomizeTextComponent, FilterComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

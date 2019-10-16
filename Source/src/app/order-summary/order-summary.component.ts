@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular'
+import { NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-order-summary',
@@ -7,8 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderSummaryComponent implements OnInit {
 
-  constructor() { }
+  showPromoBox: boolean = false;;
+  constructor(private navCtrl: NavController) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  showPromo(args) {
+    this.showPromoBox = !this.showPromoBox;;
+  }
+
+  Paynow(args) {
+    // this.navCtrl.navigateBack('verification');
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        key: JSON.stringify('Summary'),
+      }
+    };
+    this.navCtrl.navigateForward('/verification', navigationExtras);
+    //this.navCtrl.navigateForward('history');
+  }
+
+  viewAccount(args) {
+    this.navCtrl.navigateForward('account');
+  }
+
+
 
 }

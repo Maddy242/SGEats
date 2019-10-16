@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular'
+import { NavController, NavParams } from '@ionic/angular'
+import { NavigationExtras } from '@angular/router';
  
 @Component({
   selector: 'app-qrscan',
@@ -13,6 +14,15 @@ export class QRScanComponent implements OnInit {
   ngOnInit() {}
 
   StartScan(args){
-    this.navCtrl.navigateForward('/verification');
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+          key: JSON.stringify('QrCode'),
+      }
+  };
+    this.navCtrl.navigateForward('/verification', navigationExtras);
+  }
+
+  viewAccount(args){
+    this.navCtrl.navigateForward('account');
   }
 }

@@ -9,9 +9,8 @@
       </ion-title>
       <div class="icons">
         <!-- <ion-icon name="search"></ion-icon>
-          <ion-icon name="person"></ion-icon> -->
-        <!-- <img src="../../assets/images/Search.png" />
-          <img src="../../assets/images/user-profile.png" /> -->
+        <ion-icon name="person"></ion-icon> -->
+        <img (click)="viewAccount($event);" src="../../assets/images/user-profile.svg" />
       </div>
     </div>
   </ion-toolbar>
@@ -41,9 +40,16 @@
     </div>
     <div class="price-summary">
       <div class="coupon">
-        <img class="discount" src="../../assets/images/discount.png" />
-        <p>APPLY COUPON</p>
-        <img class="arrow" src="../../assets/images/arrow-frwd.png" alt="">
+        <div class="coupon-10">
+          <img class="discount" src="../../assets/images/discount.svg" />
+          <p>APPLY COUPON</p>
+          <img (click)="showPromo($event)" class="arrow" src="../../assets/images/arrow-frwd.svg" alt="">
+        </div>
+
+        <div class="promo" *ngIf="showPromoBox">
+          <input type="text" class="promo-10" placeholder="Promocode" />
+          <button class="btn-submit">Apply</button>
+        </div>
       </div>
       <div class="bill-summary">
         <p class="bill">Bill Details</p>
@@ -62,8 +68,9 @@
         <span>$ 36.75</span>
       </div>
     </div>
+
     <div class="pay">
-      <button class="btn-submit" (click)="Paynow($event)">Pay Now</button>
+      <button class="btn-submit" (click)="Paynow($event)">Place Your Order</button>
     </div>
   </div>
 </ion-content>

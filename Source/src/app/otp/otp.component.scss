@@ -75,7 +75,7 @@ ion-toolbar{
     color: #fff;
     font-family: $font-family;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
    }
@@ -96,14 +96,34 @@ ion-toolbar{
        font-weight: bold;
    }
 
-   .otp {
-    color: darkgray;
+   .otp, .otp:focus {
+    border: none;
     border-bottom: 1px solid #000;
-    width: 30px;
+    width: 55px;
     height: 36px;
     font-size: 18px;
     margin: 5px;
     color: #495057;
+    font-weight: bold;
+    text-align: center;
+    background: none;
+    outline: none;
+  }
+
+  .code-20{
+    font-family: $font-family;
+    color: #495057;
+    margin: 0px;
+  }
+
+  .code-10{
+    font-family: $font-family;
+    color: #495057;
+  }
+
+  .resend{
+    font-family: $font-family;
+    color: blue;
   }
   
   // td {

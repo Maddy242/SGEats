@@ -12,6 +12,15 @@
     display: flex;
 }
 
+.icons{
+    margin-top: 2px;
+}
+
+.icons img{
+    height: 50px;
+    width: 50px;
+}
+
 ion-content{
     --background: #F6F3F3 !important;
 }
@@ -52,13 +61,18 @@ ion-title{
     color: #fff;
     font-family: $font-family;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
 }
 
 .qr img{
     width: 70%;
+}
+
+.icons img{
+    height: 60px;
+    width: 60px;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {

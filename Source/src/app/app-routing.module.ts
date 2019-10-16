@@ -10,7 +10,9 @@ const routes: Routes = [
   { path: 'qr', loadChildren: () => import('./qrscan/qrscan.module').then( m => m.QRScanModule)},
   { path: 'verification', loadChildren: () => import('./verfication/verification.module').then( m => m.VerificationModule)},
   { path: 'order', loadChildren: () => import('./order/order.module').then( m => m.OrderModule)},
-  { path: 'summary', loadChildren: () => import('./order-summary/order-summary.module').then( m => m.OrderSummaryModule)}
+  { path: 'summary', loadChildren: () => import('./order-summary/order-summary.module').then( m => m.OrderSummaryModule)},
+  { path: 'account', loadChildren: () => import('./account/account.module').then( m => m.AccountModule)},
+  { path: 'history', loadChildren: () => import('./order-history/order-history.module').then( m => m.OrderHistoryModule)}
 ];
 
 @NgModule({

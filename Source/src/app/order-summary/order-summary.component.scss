@@ -51,7 +51,6 @@ ion-icon.md.hydrated {
     border: 1px solid #DCD9D6;
     border-radius: 5px;
     display: flex;
-    position: fixed;
     right: 90px;
 }
 
@@ -70,9 +69,10 @@ ion-icon.md.hydrated {
 }
 
 .summary-content{
-    top: 10%;
-    position: absolute;
+    top: 65px;
+    position: relative;
     width: 100%;
+    overflow: scroll;
 }
 
 .item-summary{
@@ -81,6 +81,7 @@ ion-icon.md.hydrated {
     margin: 10px;
     border-radius: 5px;
     min-height: 100px;
+    box-shadow: #333 0px 0px 5px 0px;
 
     .name{
         margin: 6px 0px 0px 0px;
@@ -97,7 +98,7 @@ ion-icon.md.hydrated {
         color: $button-background;
         font-family: $font-family;
         right: 25px;
-        position: fixed;
+        font-weight: bold;
     }
 }
 
@@ -112,18 +113,20 @@ ion-icon.md.hydrated {
 }
 
 .price-summary{
-    height: 100%;
+    height: 51vh;
     background: #fff;
     padding: 10px;
-    position: fixed;
     width: 100%;
 }
 
 .coupon{
-    display: flex;
     margin: 10px;
     border: 1px solid #DCD9D6;
     border-radius: 5px;
+}
+
+.coupon-10{
+    display: flex;
 }
 
 .arrow{
@@ -136,7 +139,7 @@ ion-icon.md.hydrated {
     height: 20px;
 }
 
-.coupon p{
+.coupon-10 p{
     font-family: $font-family;
     font-weight: bold;
 }
@@ -165,28 +168,31 @@ ion-icon.md.hydrated {
 }
 
 .total span, .gst span{
-    color: $button-background;
+    color: #495057;
     font-family: $font-family;
+    font-weight: bold;
 }
 
 .btn-submit,  .btn-submit:focus{
-    width: 100%;
+    width: 70%;
     margin: 10px 0px;
     height: 45px;
     background: $button-background;
     color: #fff;
     font-family: $font-family;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
 }
 
 .pay{
-    position: fixed;
+    // position: fixed;
     width: 100%;
     padding: 10px;
     bottom: 0px;
+    text-align: center;
+    background: #fff;
 }
 
 .total-pay{
@@ -208,7 +214,50 @@ ion-icon.md.hydrated {
     span{
         color: $button-background;
         font-family: $font-family;
+        font-weight: bold;
     }
+}
+
+.promo{
+    text-align: center;
+    margin-bottom: 10px;
+
+    .promo-10{
+        width: 90%;
+        height: 45px;
+        padding: .375rem .75rem;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        font-family: $font-family;
+        outline: none;
+        text-align: left;
+        margin: auto;
+    }
+
+    .btn-submit,  .btn-submit:focus{
+        width: 90%;
+        margin: 10px 0px;
+        height: 45px;
+        background: $button-background;
+        color: #fff;
+        font-family: $font-family;
+        outline: none;
+        border-radius: 3px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+.icons img{
+    height: 60px;
+    width: 60px;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {
@@ -218,5 +267,41 @@ ion-icon.md.hydrated {
 
     .total p, .gst p, .total-pay p{
         width: 90%;
+    }
+
+    .promo-10{
+        width: 60% !important;
+    }
+
+    .btn-submit,  .btn-submit:focus{
+        width: 60% !important;
+    }
+
+    .price-summary{
+        height: 69vh;
+    }
+}
+
+@media only screen and (min-height: 600px) and (max-height: 700px) {
+    .price-summary{
+        height: 57vh;
+    }
+}
+
+@media only screen and (min-height: 700px) and (max-height: 800px) {
+    .price-summary{
+        height: 60vh;
+    }
+}
+
+@media only screen and (min-height: 800px) and (max-height: 900px) {
+    .price-summary{
+        height: 63vh;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .price-summary{
+        height: 85vh;
     }
 }

@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController, AlertController } from '@ionic/angular'
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavController, AlertController, PopoverController, IonSlides } from '@ionic/angular';
+import { CustomizeComponent } from '../customize/customize.component';
+import { CustomizeTextComponent } from '../customize-text/customize-text.component';
+import { FilterComponent } from '../filter/filter.component'
 
 @Component({
   selector: 'app-order',
@@ -10,14 +13,20 @@ export class OrderComponent implements OnInit {
 
   slideOpts = {
     initialSlide: 0,
-    speed: 400
+    speed: 1000,
+    autoPlay : 1000
   };
   status: boolean;
   display: boolean = false;
   showPencil: boolean = true;
-  constructor(private navCtrl: NavController, private alertCtrl: AlertController) { }
+  @ViewChild('slider', {static: false}) Slider : IonSlides;
+  constructor(private navCtrl: NavController, private alertCtrl: AlertController, private popOverController: PopoverController) { }
 
   ngOnInit() { }
+
+  StartSlides(args){
+    this.Slider.startAutoplay();
+  }
 
   toggle() {
     this.status = !this.status;
@@ -37,9 +46,80 @@ export class OrderComponent implements OnInit {
 
   }
 
-  ShowCustomize(args) {
-    this.display = true
+  // ShowCustomize(args) {
+  //   //this.display = true
+  // }
+
+  async ShowCustomize(ev: any) {
+    this.presentCustomizePopover(ev);
   }
+
+  async ShowCustomizeText(ev: any) {
+    this.presentCustomizeTextPopover(ev);
+  }
+
+  openFilter(args){
+    this.presentFilterPopover(args);
+  }
+
+  async presentCustomizePopover(ev: any) {
+    const popover = await this.popOverController.create({
+      component: CustomizeComponent,
+      event: ev,
+      translucent: true,
+      backdropDismiss: true,
+      cssClass: 'Customize-pop'
+    });
+
+
+    await popover.present();
+
+    popover.onDidDismiss().then(() => {
+      console.log('test');
+    }, () => {
+
+    });
+  }
+
+  async presentCustomizeTextPopover(ev: any) {
+    const popover = await this.popOverController.create({
+      component: CustomizeTextComponent,
+      event: ev,
+      translucent: true,
+      backdropDismiss: true,
+      cssClass: 'Customize-pop'
+    });
+
+
+    await popover.present();
+
+    popover.onDidDismiss().then(() => {
+      console.log('test');
+    }, () => {
+
+    });
+  }
+
+  async presentFilterPopover(ev: any) {
+    const popover = await this.popOverController.create({
+      component: FilterComponent,
+      event: ev,
+      translucent: true,
+      backdropDismiss: true,
+      cssClass: 'Customize-pop'
+    });
+
+
+    await popover.present();
+
+    popover.onDidDismiss().then(() => {
+      console.log('test');
+    }, () => {
+
+    });
+  }
+
+
 
   CloseCustomize(args) {
     this.display = false;
@@ -52,8 +132,12 @@ export class OrderComponent implements OnInit {
       this.display = false;
   }
 
-  Ordernow(args){
+  Ordernow(args) {
     this.navCtrl.navigateForward('summary');
+  }
+
+  viewAccount(args){
+    this.navCtrl.navigateForward('account');
   }
 
 
