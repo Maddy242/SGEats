@@ -105,13 +105,13 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
 }
 
 .cust-10 p{
-    color: #495057;
+    color: $subfont-color;
     margin: 5px 0px;
     font-family: $font-family;
 }
 
 .addon{
-    color: #495057;
+    color: $subfont-color;
     margin: 10px 0px 0px 0px;
     font-family: $font-family;
 }
@@ -125,7 +125,7 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
     display: flex;
 }
 
-.quant ion-icon.md.hydrated {
+.quant ion-icon.md.hydrated, .quant ion-icon.ios.hydrated {
     width: 20px;
     height: 20px;
     background: #EFEBE9;
@@ -179,7 +179,7 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    color: $subfont-color;
     background: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -206,7 +206,7 @@ ion-slides { --bullet-background: #000; --bullet-background-active: #D3100E ; }
 
 .cust-40 label{
     margin-left: 10px; 
-    color: #495057;
+    color: $subfont-color;
     font-family: $font-family;
 }
 
@@ -295,6 +295,14 @@ img.audio {
 .icons img{
     height: 60px;
     width: 60px;
+}
+
+.count{
+    text-align: center;
+    width: 20px;
+    outline: none;
+    border: none;
+    color: #495057;
 }
 
 

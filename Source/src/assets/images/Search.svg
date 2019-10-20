@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="18.8960096" cy="18" r="18"></circle>
+        <filter x="-52.8%" y="-47.2%" width="205.6%" height="205.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.843806612   0 0 0 0 0.816633724   0 0 0 0 0.789460836  0 0 0 0.293241914 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-265.000000, -27.000000)">
+            <g id="Group-3" transform="translate(276.103990, 37.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M11.2574424,14.2353672 C10.7416215,16.0574011 11.0063379,17.960565 12.0029946,19.5942373 C13.3321887,21.7728814 15.8109946,23.1263277 18.4720096,23.1263277 C19.4763081,23.1263277 20.4714126,22.9309605 21.3942782,22.5579661 L25.2757111,28.919887 L26.8267558,28.0724294 L22.9452036,21.7102825 C24.2794126,20.7664407 25.2365469,19.4371751 25.6742782,17.8908475 C26.1900991,16.0688136 25.9253827,14.1656497 24.928726,12.5319774 C23.5996514,10.3534463 21.1208454,9 18.4598305,9 C17.1569051,9 15.8687857,9.32757062 14.7345767,9.94723164 C13.0082484,10.8903955 11.7735021,12.4133333 11.2574424,14.2353672 Z M18.4598305,10.6949153 C20.4829946,10.6949153 22.367532,11.7236158 23.3778006,13.379548 C24.1352932,14.6211299 24.3364872,16.0675706 23.9443678,17.4523164 C23.5523678,18.8370621 22.6138603,19.9945763 21.3018603,20.7112994 C20.439532,21.1823729 19.4611439,21.4314124 18.472129,21.4314124 C16.4489648,21.4314124 14.5644275,20.4027119 13.5541588,18.7467797 C12.7966663,17.5051977 12.5954723,16.0588701 12.9875917,14.6741243 C13.3797111,13.2892655 14.3180991,12.1318644 15.6300991,11.4150282 C16.4924275,10.9439548 17.4708155,10.6949153 18.4598305,10.6949153 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

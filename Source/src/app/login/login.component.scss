@@ -67,11 +67,9 @@
         font-family: $font-family;
     }
 
-    .toast-content-10 .toast-wrapper .toast-container .toast-content{
-        padding: 5px 0px;
-        text-align: center;
-        width: 50% !important;    
-    }
+    // ion-toast#ion-overlay-1{
+    //     --width: 80%;
+    // }
 
     @media only screen and (min-width: 500px) and (max-width: 768px) {
        .btn-submit, .btn-submit:focus{

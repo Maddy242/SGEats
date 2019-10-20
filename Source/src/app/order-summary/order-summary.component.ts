@@ -18,15 +18,22 @@ export class OrderSummaryComponent implements OnInit {
     this.showPromoBox = !this.showPromoBox;;
   }
 
+  AddCount(element, canAdd) {
+    if (element != undefined && element != null) {
+      if (canAdd)
+        element.value = +(element.value) + 1;
+      else
+        element.value = +(element.value) - 1;
+    }
+  }
+
   Paynow(args) {
-    // this.navCtrl.navigateBack('verification');
     let navigationExtras: NavigationExtras = {
       queryParams: {
         key: JSON.stringify('Summary'),
       }
     };
     this.navCtrl.navigateForward('/verification', navigationExtras);
-    //this.navCtrl.navigateForward('history');
   }
 
   viewAccount(args) {

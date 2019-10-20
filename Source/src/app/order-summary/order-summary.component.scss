@@ -54,7 +54,7 @@ ion-icon.md.hydrated {
     right: 90px;
 }
 
-.quant ion-icon.md.hydrated {
+.quant ion-icon.md.hydrated, ion-icon.ios.hydrated {
     width: 20px;
     height: 20px;
     background: #EFEBE9;
@@ -81,7 +81,7 @@ ion-icon.md.hydrated {
     margin: 10px;
     border-radius: 5px;
     min-height: 100px;
-    box-shadow: #333 0px 0px 5px 0px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 
     .name{
         margin: 6px 0px 0px 0px;
@@ -162,13 +162,14 @@ ion-icon.md.hydrated {
 
 .total p, .gst p{
     font-family: $font-family;
-    color: #495057;
+    color: #999;
     width: 80%;
     margin: 0px;
+    font-weight: bold;
 }
 
 .total span, .gst span{
-    color: #495057;
+    color: #999;
     font-family: $font-family;
     font-weight: bold;
 }
@@ -212,7 +213,7 @@ ion-icon.md.hydrated {
     }
 
     span{
-        color: $button-background;
+        color: $pay-text;
         font-family: $font-family;
         font-weight: bold;
     }
@@ -239,6 +240,7 @@ ion-icon.md.hydrated {
         outline: none;
         text-align: left;
         margin: auto;
+        text-transform: uppercase;
     }
 
     .btn-submit,  .btn-submit:focus{
@@ -249,7 +251,7 @@ ion-icon.md.hydrated {
         color: #fff;
         font-family: $font-family;
         outline: none;
-        border-radius: 3px;
+        border-radius: 5px;
         font-size: 16px;
         font-weight: bold;
     }
@@ -258,6 +260,14 @@ ion-icon.md.hydrated {
 .icons img{
     height: 60px;
     width: 60px;
+}
+
+.count{
+    text-align: center;
+    width: 20px;
+    outline: none;
+    border: none;
+    color: #495057;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {

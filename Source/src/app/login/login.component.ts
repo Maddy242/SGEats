@@ -18,14 +18,18 @@ export class LoginComponent implements OnInit {
   }
 
   loginClick(args) {
-    if (this.mobileValidation(this.mobileNumber))
-      this.navCtrl.navigateForward("/otp");
+    if (this.mobileNumber != null && this.mobileNumber != "") {
+      if (this.mobileValidation(this.mobileNumber))
+        this.navCtrl.navigateForward("/otp");
+      else
+        this.presentToast("Invalid Mobile Number");
+    }
     else
-      this.presentAlert("Invalid Mobile Number");
+      this.presentToast("Please enter mobile number");
   }
 
   mobileValidation(number): any {
-    var pattern = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+    var pattern = /^([0|\+[0-9]{1,5})?([7-9][0-9]{7,9})$/;
     if (pattern.test(number))
       return true;
     else
@@ -37,7 +41,8 @@ export class LoginComponent implements OnInit {
     const alert = await this.alertCtrl.create({
       header: 'Error',
       message: content,
-      buttons: ['OK']
+      buttons: ['OK'],
+      cssClass: 'alert-style'
     });
 
     await alert.present();
@@ -46,7 +51,9 @@ export class LoginComponent implements OnInit {
   async presentToast(content) {
     const toast = await this.toasterCtrl.create({
       message: content,
-      duration: 2000
+      duration: 500,
+      cssClass: 'toast-content-10'
+      
     });
     toast.present();
   }

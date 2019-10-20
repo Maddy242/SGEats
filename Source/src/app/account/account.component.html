@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="tool">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <p class="header">Account</p>
+      </ion-title>
+      <div class="icons">
+        <img (click)="logout($event)" src="../../assets/images/logout.svg" />
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <div class="content-10">
+      <span class="name-10">Name</span>
+      <span class="edit-fields" *ngIf="!showEditBox" (click)="EnableEdit($event)">Edit</span>
+      <span class="edit-fields" *ngIf="showEditBox" (click)="EnableEdit($event)">Save</span>
+      <div class="name" *ngIf="!showEditBox">
+        <p>Mark Edmond</p>
+      </div>
+      <div class="edit" *ngIf="showEditBox">
+        <input type="text" class="edit-10" placeholder="Name" value="Mark Edmond" />
+      </div>
+    </div>
+    <div class="content-10">
+      <span class="mobile-10">Mobile</span>
+      <div class="mobile" *ngIf="!showEditBox">
+        <p>8220236267</p>
+      </div>
+      <div class="edit" *ngIf="showEditBox">
+        <input type="text" class="edit-10" placeholder="Mobile Number" value="8220236267"/>
+      </div>
+    </div>
+    <div class="content-10">
+      <span class="email-10">Email</span>
+      <div class="mobile" *ngIf="!showEditBox">
+        <p>mathan@sgeats.com</p>
+      </div>
+      <div class="edit" *ngIf="showEditBox">
+        <input type="text" class="edit-10" placeholder="Email" value="mathan@sgeats.com"/>
+      </div>
+    </div>
+  </div>
+</ion-content>

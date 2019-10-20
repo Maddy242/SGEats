@@ -14,17 +14,17 @@ export class OrderComponent implements OnInit {
   slideOpts = {
     initialSlide: 0,
     speed: 1000,
-    autoPlay : 1000
+    autoPlay: 1000
   };
   status: boolean;
   display: boolean = false;
   showPencil: boolean = true;
-  @ViewChild('slider', {static: false}) Slider : IonSlides;
+  @ViewChild('slider', { static: false }) Slider: IonSlides;
   constructor(private navCtrl: NavController, private alertCtrl: AlertController, private popOverController: PopoverController) { }
 
   ngOnInit() { }
 
-  StartSlides(args){
+  StartSlides(args) {
     this.Slider.startAutoplay();
   }
 
@@ -46,9 +46,14 @@ export class OrderComponent implements OnInit {
 
   }
 
-  // ShowCustomize(args) {
-  //   //this.display = true
-  // }
+  AddCount(element, canAdd) {
+    if (element != undefined && element != null) {
+      if (canAdd)
+        element.value = +(element.value) + 1;
+      else
+        element.value = +(element.value) - 1;
+    }
+  }
 
   async ShowCustomize(ev: any) {
     this.presentCustomizePopover(ev);
@@ -58,7 +63,7 @@ export class OrderComponent implements OnInit {
     this.presentCustomizeTextPopover(ev);
   }
 
-  openFilter(args){
+  openFilter(args) {
     this.presentFilterPopover(args);
   }
 
@@ -136,7 +141,7 @@ export class OrderComponent implements OnInit {
     this.navCtrl.navigateForward('summary');
   }
 
-  viewAccount(args){
+  viewAccount(args) {
     this.navCtrl.navigateForward('account');
   }
 

@@ -1,0 +1,16 @@
+<div class="cust-model" id="custdialog">
+  <div class="content">
+    <div class="header">
+      <p (click)='ShowCustomize($event)' id="custheader">Customize</p>
+    </div>
+    <div class="cust-content">
+      <p class="cust-content-head">Chicken 65</p>
+      <div>
+        <textarea maxlength="150" placeholder="Type your customization here..." class="cust-30"></textarea>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="btn-submit" (click)="CloseCustomize($event)">Add Item</button>
+    </div>
+  </div>
+</div>

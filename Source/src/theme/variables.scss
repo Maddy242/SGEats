@@ -76,8 +76,17 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-main.inner-scroll.scroll-y{
-  background-image: url(../assets/images/background.png);
-  background-size: 100% 100%;
+.alert-style .alert-wrapper .alert-button-group button.alert-button.ion-focusable.ion-activatable.sc-ion-alert-md {
+  --ion-color-primary: #D3100E !important;
+  font-family: Montserrat;
+  font-weight: bold;
 }
 
+.alert-style .alert-wrapper .alert-message {
+  font-family: Montserrat;
+}
+
+.alert-style .alert-wrapper .alert-head .alert-title {
+  font-family: Montserrat;
+  font-weight: bold;
+}

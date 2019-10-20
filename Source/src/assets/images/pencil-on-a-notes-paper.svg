@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>pencil-on-a-notes-paper</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Customize-Select" transform="translate(-340.000000, -508.000000)" fill="#888888" fill-rule="nonzero">
+            <g id="pencil-on-a-notes-paper" transform="translate(340.000000, 508.000000)">
+                <path d="M15.75,6.22757812 L15.75,15.75 C15.75,16.9925625 14.7425625,18 13.5,18 L2.25,18 C1.0074375,18 0,16.9925625 0,15.75 L0,4.5 C0,3.2574375 1.0074375,2.25 2.25,2.25 L11.7718594,2.25 L9.52294922,4.5 L2.25,4.5 L2.25,15.75 L13.5,15.75 L13.5,8.47814062 L15.75,6.22757812 Z M14.0229492,1.59082031 L13.2275391,2.38623047 L15.6137695,4.77302344 L16.4091797,3.97761328 L14.0229492,1.59082031 Z M15.6137695,0 L14.8183594,0.795410156 L17.2045898,3.18220313 L18,2.38623047 L15.6137695,0 Z M5.2734375,10.3425469 L7.65966797,12.7287773 L14.8183594,5.56896094 L12.4321289,3.18216797 L5.2734375,10.3425469 Z M4.5,13.5 L6.75,13.5 L4.5,11.25 L4.5,13.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

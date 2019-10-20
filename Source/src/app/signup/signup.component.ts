@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-signup',
@@ -8,11 +8,11 @@ import { AlertController, NavController } from '@ionic/angular';
 })
 export class SignupComponent implements OnInit {
 
-  public name:any;
+  public name: any;
   public number: any;
   public email: any;
   public height: any;
-  constructor(public alertController: AlertController, public navCtrl: NavController) { }
+  constructor(private alertController: AlertController, private navCtrl: NavController, private toastCtrl: ToastController) { }
 
   ngOnInit() {
     this.height = {
@@ -20,18 +20,35 @@ export class SignupComponent implements OnInit {
     }
   }
 
-  signup(args){
-    if(args != null && this.name != null && this.number != null &&  this.name != "" && this.number != ""){
-      if(this.validateEmail(this.email)){
-        this.loginClick();
+  signup(args) {
+    if (args != null && this.name != null && this.number != null && this.name != "" && this.number != "") {
+      if (this.mobileValidation(this.number)) {
+        if (this.validateEmail(this.email)) {
+          this.loginClick();
+        }
+        else {
+          this.presentToast('Invalid Email');
+        }
       }
-      else{
-        this.presentAlert('Invalid Email');
-      }
+      else
+        this.presentToast('Invalid Mobile');
+    }
+    else {
+      this.presentToast('Please enter all the fields');
     }
   }
 
-  validateEmail(email): any{
+  mobileValidation(number): any {
+    var pattern = /^([0|\+[0-9]{1,5})?([7-9][0-9]{7,9})$/;
+    if (pattern.test(number))
+      return true;
+    else
+      return false;
+
+  }
+
+
+  validateEmail(email): any {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
@@ -46,19 +63,29 @@ export class SignupComponent implements OnInit {
     await alert.present();
   }
 
-  loginClick(){
+  async presentToast(content) {
+    const toast = await this.toastCtrl.create({
+      message: content,
+      duration: 500,
+      cssClass: 'toast-content-10',
+
+    });
+    toast.present();
+  }
+
+  loginClick() {
     this.navCtrl.navigateForward("/login");
   }
 
-  show(args){
-     this.height = {
-         'height': '115vh'
-     }
+  show(args) {
+    this.height = {
+      'height': '115vh'
+    }
   }
 
-  hide(args){
+  hide(args) {
     this.height = {
-        'height': '100vh'
+      'height': '100vh'
     }
   }
 

@@ -8,8 +8,6 @@
         <p class="header">Order Summary</p>
       </ion-title>
       <div class="icons">
-        <!-- <ion-icon name="search"></ion-icon>
-        <ion-icon name="person"></ion-icon> -->
         <img (click)="viewAccount($event);" src="../../assets/images/user-profile.svg" />
       </div>
     </div>
@@ -22,18 +20,18 @@
       <div class="item">
         <p class="name">Chicken 65</p>
         <div class="quant col-6">
-          <ion-icon name="remove"></ion-icon>
-          <p> 0 </p>
-          <ion-icon name="add"></ion-icon>
+          <ion-icon name="remove" (click)="AddCount(item1, false)"></ion-icon>
+          <input type="number" #item1 class="count" pattern="[0-9]*" value="0" maxlength="1" size="1" />
+          <ion-icon name="add" (click)="AddCount(item1, true)"></ion-icon>
         </div>
         <span class="price">$ 5.00</span>
       </div>
       <div class="item">
         <p class="name">Chicken Briyani</p>
         <div class="quant">
-          <ion-icon name="remove"></ion-icon>
-          <p> 0 </p>
-          <ion-icon name="add"></ion-icon>
+          <ion-icon name="remove" (click)="AddCount(item2, false)"></ion-icon>
+                  <input type="number" #item2 class="count" pattern="[0-9]*" value="0" maxlength="1" size="1" />
+                  <ion-icon name="add" (click)="AddCount(item2, true)"></ion-icon>
         </div>
         <span class="price">$ 5.00</span>
       </div>

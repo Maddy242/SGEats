@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="tool">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <p class="header">Order History</p>
+      </ion-title>
+      <div class="icons">
+        <!-- <ion-icon name="search"></ion-icon>
+        <ion-icon name="person"></ion-icon> -->
+        <img (click)="viewAccount($event);" src="../../assets/images/user-profile.svg" />
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <div class="tabs">
+      <ion-tabs>
+        <ion-tab-bar slot="top">
+          <ion-tab-button tab="schedule" (click)="changeTab(true)"
+            [ngClass]="status ? 'activated-10' : 'unactivated-10'">
+            <ion-label>Past Orders</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="about" (click)="changeTab(false)" [ngClass]="status ? 'unactivate-10' : 'activated-10'">
+            <ion-label>Upcoming Orders</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+
+      <div class="past" *ngIf="status">
+        <div class="past-detail">
+          <p class="rest-10">Agro Restaurent</p>
+          <p class="order">Order ID: #321</p>
+          <div class="past-10">
+            <p class="date">Sep 21, 2019</p>
+            <p class="amount">$ 35.00</p>
+          </div>
+        </div>
+        <div class="past-detail">
+          <p class="rest-10">Agro Restaurent</p>
+          <p class="order">Order ID: #321</p>
+          <div class="past-10">
+            <p class="date">Sep 21, 2019</p>
+            <p class="amount">$ 35.00</p>
+          </div>
+        </div>
+        <div class="past-detail">
+          <p class="rest-10">Agro Restaurent</p>
+          <p class="order">Order ID: #321</p>
+          <div class="past-10">
+            <p class="date">Sep 21, 2019</p>
+            <p class="amount">$ 35.00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="upcoming" *ngIf="!status">
+        <div class="upcoming-detail">
+          <div class="logo-content">
+            <img src="../../assets/images/logo-status.PNG" />
+            <div>
+                <p class="rest-10">Agro Restaurent</p>
+              <p class="order">Order ID: #400</p>
+              <p class="date">Oct 14, 2019</p>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="order-status">
+              <div class="bubble success"></div>
+              <p>Order Received</p>
+            </div>
+            <div class="line line-success"></div>
+            <div class="order-status">
+              <div class="bubble success"></div>
+              <p>Food is being Prepared</p>
+            </div>
+            <div class="line"></div>
+            <div class="bubble"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-content>
